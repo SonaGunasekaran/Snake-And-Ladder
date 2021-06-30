@@ -19,7 +19,7 @@ namespace SnakeAndLadder
             //creating an object
             Random random = new Random();
             
-            while(i==0 || i <= USER_DES)
+            while(i>0 || i <= USER_DES)
             {
                 // calling the Next() Method for generating random values
                 int dieInput = random.Next(1, 7);
@@ -39,7 +39,7 @@ namespace SnakeAndLadder
                 }
                 if(position>USER_DES)
                 {
-                    userpos +=position ;
+                    position=position ;
                 }
                 else if(position==USER_DES)
                 {
