@@ -12,7 +12,7 @@ namespace SnakeAndLadder
             Random random = new Random();
             // calling the Next() Method for generating random values
             int dieInput = random.Next(1, 7);
-            Console.WriteLine("Snake and Laddergame played by a player" + " " + player + " " + "at start position" + " " + position);
+            Console.WriteLine( "The player" + " " + player + "rolles the die and get " +  " " + position);
         }
         
     }
