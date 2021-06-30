@@ -3,17 +3,39 @@
 namespace SnakeAndLadder
 {
     class Program
-    {
-        static void Main(string[] args)
+    { 
+        public const int LADDER_POS = 2;
+        public const int SNAKE_POS = 1;
+        public const int NO_PLAY = 0;
+    
+         public static void Main(string[] args)
         {
             int position = 0; //local variable
             int player = 1;
-              // creating an object
             Random random = new Random();
             // calling the Next() Method for generating random values
             int dieInput = random.Next(1, 7);
-            Console.WriteLine( "The player" + " " + player + "rolles the die and get " +  " " + position);
+            int choice = random.Next(1, 3);
+            // Selection statement
+
+            switch (choice)
+            {
+                case LADDER_POS:
+                    position += dieInput;
+                    break;
+                case SNAKE_POS:
+                    position -= dieInput;
+                    break;
+                case NO_PLAY:
+                    position += 0;
+                    break;
+            }
+            Console.WriteLine("The player" + " " + player + "rolles the die and get " + " " + position);
+
         }
         
     }
-}
+   
+
+ }
+        
