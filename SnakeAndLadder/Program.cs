@@ -11,12 +11,15 @@ namespace SnakeAndLadder
 
         public static void Main(string[] args)
         {
-            int position = 0; //local variable
+            //local variable
+            int position = 0; 
             int player = 1;
             int userpos = 0;
+            int i=0;
+            //creating an object
             Random random = new Random();
             
-            while(position==0 || position <= USER_DES)
+            while(i==0 || i <= USER_DES)
             {
                 // calling the Next() Method for generating random values
                 int dieInput = random.Next(1, 7);
@@ -44,7 +47,7 @@ namespace SnakeAndLadder
                 }
                 else
                 {
-                    position++;
+                    i++;
                 }
 
 
