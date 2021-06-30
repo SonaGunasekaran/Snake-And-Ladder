@@ -13,9 +13,10 @@ namespace SnakeAndLadder
         {
             int position = 0; //local variable
             int player = 1;
+            int userpos = 0;
             Random random = new Random();
             
-            for (position = 0; position <= USER_DES; position++)
+            while(position==0 || position <= USER_DES)
             {
                 // calling the Next() Method for generating random values
                 int dieInput = random.Next(1, 7);
@@ -33,9 +34,9 @@ namespace SnakeAndLadder
                         position += 0;
                         break;
                 }
-                if(position<0)
+                if(position>USER_DES)
                 {
-                    position = 0;
+                    userpos +=position ;
                 }
                 else if(position==USER_DES)
                 {
